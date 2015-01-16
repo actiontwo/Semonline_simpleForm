@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<form action="#" method="get" id="simpleForm">
+  <div class="groupFiled">
+    <label for="numberField1">Field 1</label>
+    <input id="numberField1" type="number" />
+  </div>
+  <br />
+
+  <div class="groupFiled">
+    <label for="numberField2">Field 2</label>
+    <input id="numberField2" type="number" />
+  </div>
+
+  <span id="alert"></span>
+</form>
+
+<script type="text/javascript">
+  var CONSTANT = 1.2;
+  var field1 = document.getElementById("numberField1");
+  var field2 = document.getElementById("numberField2");
+  var alert = document.getElementById('alert');
+  field1.addEventListener('input', function () {
+    if (field1.value != "") {
+      field2.value = field1.value * CONSTANT;
+      alert.innerHTML = ''
+    }
+    else {
+      alert.innerHTML = 'Valid value'
+    }
+  })
+</script>
+</body>
+</html>
